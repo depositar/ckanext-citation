@@ -1,0 +1,37 @@
+# Chinese (Traditional, Taiwan) translations for ckanext-citation.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the ckanext-citation
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ckanext-citation 0.0.1b0\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-08-25 23:42+0800\n"
+"PO-Revision-Date: 2019-08-25 23:42+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_Hant_TW\n"
+"Language-Team: zh_Hant_TW <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ckanext/citation/fanstatic/scripts/modules/show-citation.js:84
+msgid "Major Styles"
+msgstr "主流樣式"
+
+#: ckanext/citation/templates/citation/package/snippets/citation.html:9
+msgid "Cite as"
+msgstr "引用為"
+
+#: ckanext/citation/templates/citation/package/snippets/citation.html:16
+msgid "Loading..."
+msgstr "讀取中..."
+
+#: ckanext/citation/templates/citation/package/snippets/citation.html:20
+msgid "Cut to clipboard"
+msgstr "複製到剪貼簿"
+

@@ -1,0 +1,7 @@
+.citation {
+  word-wrap: break-word;
+}
+
+.citation .btn-group {
+  display: none;
+}
