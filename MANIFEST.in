@@ -1,5 +1,5 @@
 include README.rst
 include LICENSE
-recursive-include ckanext/citation *.html *.json *.js *.less *.css *.mo
+recursive-include ckanext/citation *.html *.json *.js *.less *.css *.mo *.po
 recursive-include ckanext/citation/fanstatic *
 recursive-include ckanext/citation/public *
