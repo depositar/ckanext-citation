@@ -111,7 +111,7 @@ this.ckan.module('show-citation', function (jQuery) {
           };
           var citeproc = new CSL.Engine(citeprocSys, a1[0]);
           citeproc.updateItems([self.options.url]);
-          self.record.html(citeproc.makeBibliography()[1].join('\n'));
+          self.record.replaceWith(citeproc.makeBibliography()[1].join('\n'));
           self.clipboard.show();
         }
       );
