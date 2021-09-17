@@ -11,7 +11,7 @@ this.ckan.module('show-citation', function (jQuery) {
       $.proxyAll(this, /setup/, /_on/);
 
       this.citation = this.el.data('citation');
-      this.record = this.el.parent().next('div');
+      this.record = this.el.parent().find('div').first();
       this.clipboard = this.record.next();
       var clipboardJS = new ClipboardJS(this.clipboard.find('.btn')[0]);
 

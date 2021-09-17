@@ -9,9 +9,10 @@
     <h2 class="module-heading"><i class="fa fa-copy"></i> {{ _('Cite as') }}</h2>
   {% endblock %}
   {% block cite_as_content %}
-    <p class="module-content">
+    <section class="module-content">
       <input type="hidden" data-module="show-citation" data-citation="{{ h.dump_json(dataset_citation) }}">
       </input>
+      <p></p>
       {% block cite_as_text %}
         <div>{{ _('Loading...') }}</div>
       {% endblock %}
@@ -20,7 +21,7 @@
           <i class="fa fa-clipboard"></i> {{ _("Cut to clipboard") }}
         </span>
       </div>
-    </p>
+    </section>
   {% endblock %}
 </section>
 
