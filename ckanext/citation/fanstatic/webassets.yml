@@ -1,0 +1,20 @@
+main-js:
+  output: citation/%(version)s_main.js
+  contents:
+    - scripts/modules/show-citation.js
+  extra:
+    preload:
+      - base/main
+      - citation/vendor
+
+main-css:
+  output: citation/%(version)s_main.css
+  contents:
+    - styles/citation.css
+
+vendor:
+  output: citation/%(version)s_vendor.js
+  contents:
+    - scripts/vendor/lodash.js/lodash.js
+    - scripts/vendor/citeproc.js/citeproc.js
+    - scripts/vendor/clipboard.js/clipboard.js
