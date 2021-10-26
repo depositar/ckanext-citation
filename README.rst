@@ -9,7 +9,7 @@ to cite a dataset in a specific citation style.
 Requirements
 ------------
 
-This extension is only tested in CKAN 2.7 and later.
+This extension is only tested in CKAN 2.9 and later.
 
 ------------
 Installation
@@ -69,7 +69,7 @@ Commands
 
 1. ``build_styles``: generate a list of citation styles.::
 
-    paster --plugin=ckanext-citation citation build_styles
+    ckan -c CONFIG citation build_styles
 
 * By default, the following styles will be shown as major styles:
 
