@@ -27,7 +27,7 @@ To install ckanext-citation:
 
 3. Add ``citation`` to the ``ckan.plugins`` setting in your CKAN
    config file (by default the config file is located at
-   ``/etc/ckan/default/production.ini``).
+   ``/etc/ckan/default/ckan.ini``).
 
 4. Add a file ``templates/package/read_base.html`` in your custom extension
    (or modify ``/usr/lib/ckan/default/src/ckan/ckan/templates/package/read_base.html`` if
