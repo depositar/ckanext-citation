@@ -43,7 +43,7 @@ this.ckan.module('show-citation', function (jQuery) {
         'title': this.citation.title,
         'author': [{'literal': this.citation.author}],
         'issued': {'date-parts': [[issued.getFullYear(),
-            issued.getMonth(), issued.getDate()]]},
+            issued.getMonth() + 1, issued.getDate()]]},
         'URL': this.options.url,
         'version': this.citation.version
       };
