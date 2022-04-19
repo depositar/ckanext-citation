@@ -10,6 +10,7 @@ p = os.path.join(
         os.path.dirname(inspect.getfile(m)),
         'public', 'ckanext', 'citation', 'csl')
 csl_p = os.path.join(p, 'styles')
+csl_cp = os.path.join(p, 'custom_styles')
 
 
 @click.group(u'citation')
@@ -49,6 +50,7 @@ def build_styles(csl, category=''):
     xmlns = 'http://purl.org/net/xbiblio/csl'
     output = []
     for c in csl:
+        href = '/ckanext/citation/csl/styles/'
         if not c.endswith('.csl'): continue
         tree = ET.parse(os.path.join(csl_p, c))
         root = tree.getroot()
@@ -58,10 +60,13 @@ def build_styles(csl, category=''):
         if title_short != None:
             title_short = title_short.text
             title += ' (%s)' % title_short
+        if os.path.exists(os.path.join(csl_cp, c)):
+            # Use custom CSL styles if exist
+            href = '/ckanext/citation/csl/custom_styles/'
         output.append(dict([
                 ('id', c.split('.', 1)[0]),
                 ('text', title),
-                ('href', '/ckanext/citation/csl/styles/' + c),
+                ('href', href + c),
                 ('category', category)])
         )
     return output
