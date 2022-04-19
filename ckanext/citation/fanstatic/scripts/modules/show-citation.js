@@ -37,11 +37,14 @@ this.ckan.module('show-citation', function (jQuery) {
         this.citation.version = version;
       }
       var issued = new Date(this.citation.version);
+      var citationKey = this.citation.author.replaceAll(' ', '_').toLowerCase()
+            + '_' + issued.getFullYear();
       var item = {
         'id': this.options.url,
         'type': 'dataset',
         'title': this.citation.title,
         'author': [{'literal': this.citation.author}],
+        'citation-key': citationKey,
         'issued': {'date-parts': [[issued.getFullYear(),
             issued.getMonth() + 1, issued.getDate()]]},
         'URL': this.options.url,
