@@ -37,7 +37,8 @@ this.ckan.module('show-citation', function (jQuery) {
         this.citation.version = version;
       }
       var issued = new Date(this.citation.version);
-      var citationKey = this.citation.author.replaceAll(' ', '_').toLowerCase()
+      // Use BibDesk's strict interpretation of the valid characters for cite keys
+      var citationKey = this.citation.author.replaceAll(/[\s"@',\\#}{~%]/g, '_').toLowerCase()
             + '_' + issued.getFullYear();
       var item = {
         'id': this.options.url,
