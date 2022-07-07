@@ -53,9 +53,22 @@ Configuration
 Mapping between CKAN Fields and `CSL Variables`_
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Currently only title and author fields are supported. ::
+Currently only title, author, and url fields are supported
+(the default value of url will be the url of current page). ::
 
     ckanext.citation.csl_mappings = {"title": "title", "author": "author"}
+
+It also maps the name part of the ``ark`` CKAN field from the
+`ckanext-ark <https://github.com/depositar/ckanext-ark>`_ extension
+to the last part of ``citation-key`` CSL variable.
+
+For example the following ``ark`` CKAN field::
+
+    ark:99999/k2abdfg6
+
+Will be converted to the following ``citation-key`` CSL variable::
+
+    author_year_k2abdfg6
 
 -----
 Usage

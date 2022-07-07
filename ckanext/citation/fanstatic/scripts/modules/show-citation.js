@@ -38,8 +38,12 @@ this.ckan.module('show-citation', function (jQuery) {
       }
       var issued = new Date(this.citation.version);
       // Use BibDesk's strict interpretation of the valid characters for cite keys
-      var citationKey = this.citation.author.replaceAll(/[\s"@',\\#}{~%]/g, '_').toLowerCase()
-            + '_' + issued.getFullYear();
+      var citationKeyElem = [
+          this.citation.author.replaceAll(/[\s"@',\\#}{~%]/g, '_').toLowerCase(),
+          issued.getFullYear(),
+          this.citation.ark.split('/').pop()
+      ];
+      var citationKey = citationKeyElem.filter(Boolean).join('_');
       var item = {
         'id': this.options.url,
         'type': 'dataset',
@@ -48,7 +52,7 @@ this.ckan.module('show-citation', function (jQuery) {
         'citation-key': citationKey,
         'issued': {'date-parts': [[issued.getFullYear(),
             issued.getMonth() + 1, issued.getDate()]]},
-        'URL': this.options.url,
+        'URL': this.citation.url || this.options.url,
         'version': this.citation.version
       };
 

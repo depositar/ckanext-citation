@@ -1,4 +1,4 @@
-{% set dataset_citation = {'version': c.pkg_dict['metadata_modified']} %}
+{% set dataset_citation = {'version': c.pkg_dict['metadata_modified'], 'ark': c.pkg_dict.get('ark', '')} %}
 
 {% for k, v in h.map_ckan_to_csl_field().items() %}
   {% do dataset_citation.update({k: c.pkg_dict.get(v, '')}) %}
